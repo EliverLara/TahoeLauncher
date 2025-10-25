@@ -7,37 +7,32 @@ AppListView {
 
 	showSectionSeparator: false
 	highlightFollowsCurrentItem: false
-	spacing: 15
+	spacing: 0
 
-	delegate: GridView {
-		id: grid
-		
+	delegate: ColumnLayout {
+		id: category
+
 		property var currentCategory: slicedCategories[index]
 		property bool expanded: false
-		property bool canMoveWithKeyboard: false
-		property var rows: {
-            if(grid.model.count%root.columns == 0 )  {
-                return Math.floor(grid.model.count/root.columns);
-            }
-            return Math.floor((grid.model.count/root.columns)+1);
-        }
 
-		property var expandedHeight: rows * root.cellSizeHeight
-		property var headerHeight: null
-
-        focus: expanded
+		width: appsCategorized.availableWidth
+		height: categoryHeader.height + root.cellSizeHeight
 		clip: true
-		interactive: false
+		spacing: 0
 
-        width: appsCategorized.availableWidth
-		height: root.cellSizeHeight
-		cellWidth: root.cellSizeWidth
-		cellHeight: root.cellSizeHeight
-		model: rootModel.modelForRow(currentCategory.modelIndex);
+		ColumnLayout {
+			id: categoryHeader
+			width: parent.width
+			spacing: 10
 
-		header: ColumnLayout {
-			width: grid.width
-			spacing: 15
+			/* 
+			* Provides appearance of spacing in the bottom of each category grid 
+			*/
+			Item {
+				Layout.fillWidth: true
+				Layout.fillHeight: true
+				visible: index > 0  // not showing on the first item
+			}
 			Rectangle {
                 id: separator
 				width: parent.width
@@ -62,7 +57,7 @@ AppListView {
 
 				Text {
 					Layout.alignment: Qt.AlignHCenter | Qt.AlignRight
-					text: grid.expanded ? "Show less" : "Show more"
+					text: category.expanded ? "Show less" : "Show more"
 					visible: grid.rows > 1
 					font.bold: true
 					font.pixelSize: 15
@@ -70,42 +65,63 @@ AppListView {
 					MouseArea {
 						anchors.fill: parent
 						onClicked: {
-						    expanded = !expanded
+						    category.expanded = !category.expanded
 						}
 					}
 				}
 			}
+
+			/* 
+			* Provides appearance of spacing between category header
+			* and the start of each category grid 
+			*/
+
 			Item {
-					Layout.fillWidth: true
-					Layout.fillHeight: true
+				Layout.fillWidth: true
+				Layout.fillHeight: true
+			}
+		}
+
+
+		GridView {
+			id: grid
+
+			leftMargin: fs.innerPadding / 2 // Centers the grid
+			
+			property var rows: {
+				if(grid.model.count%root.columns == 0 )  {
+					return Math.floor(grid.model.count/root.columns);
 				}
-		}
-		
-		delegate: AppGridViewDelegate {
-            id: favitem
-            triggerModel: grid.model
+				return Math.floor((grid.model.count/root.columns)+1);
+			}
+
+			property var expandedHeight: rows * root.cellSizeHeight
+			property bool canMoveWithKeyboard: false
+
+			interactive: false
+			width: appsCategorized.availableWidth
+			height: expandedHeight
+			cellWidth: root.cellSizeWidth
+			cellHeight: root.cellSizeHeight
+			model: rootModel.modelForRow(currentCategory.modelIndex);
+
+			delegate: AppGridViewDelegate {
+				triggerModel: grid.model
+			}
 		}
 
-        onExpandedHeightChanged: updateHeight()
-		
 		onExpandedChanged: updateHeight()
-
+		
 		Behavior on height {
 			NumberAnimation { duration: 200 }
 		}
 
 		function updateHeight () {
-            if(expanded) {
-                grid.height = grid.expandedHeight + grid.headerHeight;
-            }else {
-                grid.height = root.cellSizeHeight + grid.headerHeight;
-            }
+			if(category.expanded) {
+				category.height = grid.expandedHeight + categoryHeader.height;
+			}else {
+				category.height = root.cellSizeHeight + categoryHeader.height;
+			}
 		}
-
-		Component.onCompleted: {
-            grid.headerHeight = grid.headerItem.height;
-            updateHeight()
-		}
-
 	}
 }

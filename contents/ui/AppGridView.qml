@@ -27,10 +27,6 @@ GridView {
     cellWidth: root.cellSizeWidth
     cellHeight: root.cellSizeHeight
 
-    // highlight: Highlight {
-    //     hideBg: true
-    // }
-
     delegate: AppGridViewDelegate {
         id: favitem
         triggerModel: grid.model

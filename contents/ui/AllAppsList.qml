@@ -112,6 +112,8 @@ ColumnLayout {
 		AppGridView {
 			id: grid
 			anchors.fill: parent
+			anchors.leftMargin: fs.innerPadding / 2
+			
 			model: main.showAllApps ? currentModel : globalFavorites
 			canMoveWithKeyboard: true
 			//viewItem.highlightFollowsCurrentItem: false
