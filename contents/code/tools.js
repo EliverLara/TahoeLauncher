@@ -37,7 +37,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
 
     if (favoriteModel.activities === undefined ||
-        favoriteModel.activities.runningActivities.length <= 1) {
+        favoriteModel.activities.activities.length <= 1) {
         var action = {};
 
         if (favoriteModel.isFavorite(favoriteId)) {
@@ -61,7 +61,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
         var linkedActivities = favoriteModel.linkedActivitiesFor(favoriteId);
 
-        var activities = favoriteModel.activities.runningActivities;
+        var activities = favoriteModel.activities.activities;
 
         // Adding the item to link/unlink to all activities
 
