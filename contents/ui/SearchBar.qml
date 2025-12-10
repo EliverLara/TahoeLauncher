@@ -29,7 +29,7 @@ RowLayout {
         Layout.fillWidth: true
         font.pointSize: 18
 
-        placeholderText: "Applications"
+        placeholderText: i18n("Applications")
         placeholderTextColor: main.dimmedTextColor
         background: Rectangle{
             color: "transparent"

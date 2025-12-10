@@ -57,7 +57,7 @@ AppListView {
 
 				Text {
 					Layout.alignment: Qt.AlignHCenter | Qt.AlignRight
-					text: category.expanded ? "Show less" : "Show more"
+					text: category.expanded ? i18n("Show less") : i18n("Show more")
 					visible: grid.rows > 1
 					font.bold: true
 					font.pixelSize: 15

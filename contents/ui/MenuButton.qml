@@ -10,7 +10,7 @@ Item {
     
     property var menuModel: [
         {
-            title: "Show apps in a list",
+            title: i18n("Show apps in a list"),
             action: () => {
                 plasmoid.configuration.showAllAppsInList = true;
                 plasmoid.configuration.showAllAppsInGrid = false;
@@ -20,7 +20,7 @@ Item {
             enabled: true
         }, 
         {
-            title: "Show apps in a grid",
+            title: i18n("Show apps in a grid"),
             action: () => {
                 plasmoid.configuration.showAllAppsInList = false;
                 plasmoid.configuration.showAllAppsInGrid = true;
@@ -30,7 +30,7 @@ Item {
              enabled: true
         },
         {
-            title: "Show apps categorized",
+            title: i18n("Show apps categorized"),
            action: () => {
                 plasmoid.configuration.showAllAppsInList = false;
                 plasmoid.configuration.showAllAppsInGrid = false;
