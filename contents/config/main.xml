@@ -59,6 +59,10 @@
       <label>Number of columns to favorites apps grid</label>
       <default>5</default>
     </entry>
+    <entry name="numberOfRows" type="Int">
+      <label>Number of rows to app grid</label>
+      <default>4</default>
+    </entry>
     <entry name="compactListItems" type="Bool">
       <label>Show list items in a compact format</label>
       <default>false</default>

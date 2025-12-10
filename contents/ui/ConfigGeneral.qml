@@ -53,6 +53,7 @@ KCM.SimpleKCM {
 
     property alias cfg_appsIconSize: appsIconSize.currentIndex
     property alias cfg_numberColumns: numberColumns.value
+    property alias cfg_numberOfRows: numberOfRows.value
 
     property alias cfg_compactListItems: compactListItems.checked
     property alias cfg_showListItemDescription: showListItemDescription.checked
@@ -228,6 +229,13 @@ KCM.SimpleKCM {
       from: 4
       to: 6
       Kirigami.FormData.label: i18n("Number of columns in grid")
+    }
+    SpinBox{
+      id: numberOfRows
+
+      from: 4
+      to: 8
+      Kirigami.FormData.label: i18n("Number of rows in grid")
     }
     CheckBox {
       id: compactListItems
