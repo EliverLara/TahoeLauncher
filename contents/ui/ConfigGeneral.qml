@@ -227,7 +227,7 @@ KCM.SimpleKCM {
       id: numberColumns
 
       from: 4
-      to: 6
+      to: 8
       Kirigami.FormData.label: i18n("Number of columns in grid")
     }
     SpinBox{
