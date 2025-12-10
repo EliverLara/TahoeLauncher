@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TahoeLauncher\n"
 "Report-Msgid-Bugs-To: https://github.com/EliverLara/TahoeLauncher\n"
-"POT-Creation-Date: 2025-11-23 15:32-0600\n"
+"POT-Creation-Date: 2025-12-10 17:24-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,6 +125,10 @@ msgstr ""
 
 #: ../contents/ui/ConfigGeneral.qml
 msgid "Number of columns in grid"
+msgstr ""
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Number of rows in grid"
 msgstr ""
 
 #: ../contents/ui/ConfigGeneral.qml
