@@ -27,6 +27,10 @@ A modern Launcher for KDE plasma inspired on MacOS!
 3. Search for "TahoeLauncher"
 4. Drag and drop to your desired place.
 
+## Internationalization
+
+If you would like to contribute by adding translations for your language, please follow the instructions in the [Translations Readme](translate/ReadMe.md).
+
 ## Support Me ♥
 If you enjoy what I do, consider supporting me, every little bit means the world! 
 <br>
