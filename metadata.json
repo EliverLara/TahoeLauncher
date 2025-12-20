@@ -1,22 +1,27 @@
 {
-    "KPackageStructure": "Plasma/Applet",
-    "KPlugin": {
-        "Authors": [
-            {
-                "Email": "eliverlara@gmail.com",
-                "Name": "EliverLara"
-            }
-        ],
-        "Category": "Application Launchers",
-        "Description": "A modern Launcher for plasma inspired on MacOS!",
-        "EnabledByDefault": true,
-        "Icon": "start-here-kde",
-        "Id": "TahoeLauncher",
-        "Name": "Tahoe Launcher",
-
-        "Version": "0.1",
-        "Website": "https://github.com/EliverLara/TahoeLauncher"
-    },
-    "X-Plasma-Provides": [ "org.kde.plasma.launchermenu" ],
-    "X-Plasma-API-Minimum-Version": "6.0"
+	"KPackageStructure": "Plasma/Applet",
+	"KPlugin": {
+		"Authors": [
+			{
+				"Email": "eliverlara@gmail.com",
+				"Name": "EliverLara"
+			}
+		],
+		"Category": "Application Launchers",
+		"Description": "A modern Launcher for plasma inspired on MacOS!",
+		"Description[nl]": "Een moderne programmastarter voor Plasma, geïnspireerd op die van macOS!",
+		"Description[pl]": "Nowoczesny launcher dla Plasma inspirowany macOS!",
+		"EnabledByDefault": true,
+		"Icon": "start-here-kde",
+		"Id": "TahoeLauncher",
+		"Name": "Tahoe Launcher",
+		"Name[nl]": "Tahoe-programmastarter",
+		"Name[pl]": "Tahoe Launcher",
+		"Version": "0.1",
+		"Website": "https://github.com/EliverLara/TahoeLauncher"
+	},
+	"X-Plasma-API-Minimum-Version": "6.0",
+	"X-Plasma-Provides": [
+		"org.kde.plasma.launchermenu"
+	]
 }

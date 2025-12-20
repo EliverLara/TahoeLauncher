@@ -1,4 +1,4 @@
-# Translation of TahoeLauncher in LANGUAGE
+# Translation of TahoeLauncher in nl
 # Copyright (C) 2025
 # This file is distributed under the same license as the TahoeLauncher package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
