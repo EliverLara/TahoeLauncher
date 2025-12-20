@@ -1,0 +1,178 @@
+# Translation of TahoeLauncher in LANGUAGE
+# Copyright (C) 2025
+# This file is distributed under the same license as the TahoeLauncher package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TahoeLauncher\n"
+"Report-Msgid-Bugs-To: https://github.com/EliverLara/TahoeLauncher\n"
+"POT-Creation-Date: 2025-12-10 17:24-0600\n"
+"PO-Revision-Date: 2025-12-12 10:59+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../metadata.json
+msgid "Tahoe Launcher"
+msgstr "Tahoe-programmastarter"
+
+#: ../metadata.json
+msgid "A modern Launcher for plasma inspired on MacOS!"
+msgstr "Een moderne programmastarter voor Plasma, geïnspireerd op die van macOS!"
+
+#: ../contents/code/tools.js
+msgid "Remove from Favorites"
+msgstr "Verwijderen uit favorieten"
+
+#: ../contents/code/tools.js
+msgid "Add to Favorites"
+msgstr "Toevoegen aan favorieten"
+
+#: ../contents/code/tools.js
+msgid "On All Activities"
+msgstr "Op alle activiteiten"
+
+#: ../contents/code/tools.js
+msgid "On the Current Activity"
+msgstr "Op huidige activiteit"
+
+#: ../contents/code/tools.js
+msgid "Show in Favorites"
+msgstr "Tonen in favorieten"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "Algemeen"
+
+#: ../contents/ui/AppsCategorized.qml
+msgid "Show less"
+msgstr "Minder tonen"
+
+#: ../contents/ui/AppsCategorized.qml
+msgid "Show more"
+msgstr "Meer tonen"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Icon:"
+msgstr "Pictogram:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Kiezen…"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Pictogram wissen"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Launcher Positioning:"
+msgstr "Locatie van programmastarter:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Default"
+msgstr "Standaard"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Horizontal Center"
+msgstr "Midden (horizontaal)"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Screen Center"
+msgstr "Midden van scherm"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Floating"
+msgstr "Zwevend"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Offset Screen Edge (0 is Default):"
+msgstr "Afstand tot schermrand (0 = standaard):"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Offset Panel (0 is Default):"
+msgstr "Afstand tot paneel (0 = standaard):"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Grids and lists"
+msgstr "Roosters en lijsten"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Grid icon size:"
+msgstr "Grootte van pictogrammen op rooster:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Small"
+msgstr "Klein"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Medium"
+msgstr "Gemiddeld"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Large"
+msgstr "Groot"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Huge"
+msgstr "Enorm"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Number of columns in grid"
+msgstr "Aantal kolommen op rooster"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Number of rows in grid"
+msgstr "Aantal rijen op rooster"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Lists:"
+msgstr "Lijsten:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Compact list items"
+msgstr "Compacte lijstitems"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Show list item description"
+msgstr "Beschrijvingen van lijstitems tonen"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Use system font settings"
+msgstr "Systeemlettertype gebruiken"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: ../contents/ui/main.qml
+msgid "Edit Applications…"
+msgstr "Programma's bewerken…"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps in a list"
+msgstr "Programma's als lijst tonen"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps in a grid"
+msgstr "Programma's als rooster tonen"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps categorized"
+msgstr "Programma's gecategoriseerd tonen"
+
+#: ../contents/ui/SearchBar.qml
+msgid "Applications"
+msgstr "Programma's"
+
+#: ../contents/ui/SearchList.qml
+msgctxt "@info:status"
+msgid "No matches"
+msgstr "Er zijn geen zoekresultaten"
