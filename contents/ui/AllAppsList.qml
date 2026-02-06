@@ -9,7 +9,7 @@ ColumnLayout {
 
 	property QtObject allAppsModel: rootModel.modelForRow(2)
 	property QtObject recentAppsModel
-	property QtObject currentModel: rootModel.modelForRow(2)
+	property QtObject currentModel: rootModel.modelForRow(0)
 
 	property var currentStateIndex: 0// Plasmoid.configuration.defaultPage
 
@@ -29,9 +29,10 @@ ColumnLayout {
 		var categoryName;
 		var categoryIcon;
 
-		for (var i = 2; i < rootModel.count - 2; i++) {
+		for (var i = 0; i < rootModel.count; i++) {
 			categoryName  = rootModel.data(rootModel.index(i, 0), Qt.DisplayRole);
 			categoryIcon  = rootModel.data(rootModel.index(i, 0), Qt.DecorationRole);
+					
 			categories.push({
 				name: categoryName,
 				modelIndex: i,
@@ -39,7 +40,7 @@ ColumnLayout {
 			});
 		}
 		allApps.allAppsModel =  rootModel.modelForRow(2)
-		allApps.currentModel =  rootModel.modelForRow(2)
+		allApps.currentModel =  rootModel.modelForRow(0)
 		return categories;
 	}
 
