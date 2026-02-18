@@ -1,0 +1,178 @@
+# Translation of TahoeLauncher in LANGUAGE
+# Copyright (C) 2025
+# This file is distributed under the same license as the TahoeLauncher package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TahoeLauncher\n"
+"Report-Msgid-Bugs-To: https://github.com/EliverLara/TahoeLauncher\n"
+"POT-Creation-Date: 2025-12-10 17:24-0600\n"
+"PO-Revision-Date: 2026-02-18 12:59+0100\n"
+"Last-Translator: lorduskordus <lorduskordus@gmail.com>\n"
+"Language-Team: \n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../metadata.json
+msgid "Tahoe Launcher"
+msgstr "Spouštěč Tahoe"
+
+#: ../metadata.json
+msgid "A modern Launcher for plasma inspired on MacOS!"
+msgstr "Moderní spouštěč pro Plasma inspirovaný MacOS!"
+
+#: ../contents/code/tools.js
+msgid "Remove from Favorites"
+msgstr "Odstranit z oblíbených"
+
+#: ../contents/code/tools.js
+msgid "Add to Favorites"
+msgstr "Přidat do oblíbených"
+
+#: ../contents/code/tools.js
+msgid "On All Activities"
+msgstr "Na všech aktivitách"
+
+#: ../contents/code/tools.js
+msgid "On the Current Activity"
+msgstr "Na aktuální aktivitě"
+
+#: ../contents/code/tools.js
+msgid "Show in Favorites"
+msgstr "Zobrazit v oblíbených"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "Obecné"
+
+#: ../contents/ui/AppsCategorized.qml
+msgid "Show less"
+msgstr "Zobrazit méně"
+
+#: ../contents/ui/AppsCategorized.qml
+msgid "Show more"
+msgstr "Zobrazit více"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Icon:"
+msgstr "Ikona:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr "Vybrat…"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr "Odstranit ikonu"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Launcher Positioning:"
+msgstr "Pozice spouštěče:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Default"
+msgstr "Výchozí"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Horizontal Center"
+msgstr "Horizontální střed"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Screen Center"
+msgstr "Střed obrazovky"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Floating"
+msgstr "Plovoucí"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Offset Screen Edge (0 is Default):"
+msgstr "Odsazení od okraje obrazovky (0 je výchozí):"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Offset Panel (0 is Default):"
+msgstr "Odsazení od panelu (0 je výchozí):"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Grids and lists"
+msgstr "Seznamy a mřížky"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Grid icon size:"
+msgstr "Velikost ikon mřížky:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Small"
+msgstr "Malé"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Medium"
+msgstr "Střední"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Large"
+msgstr "Velké"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Huge"
+msgstr "Obrovské"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Number of columns in grid"
+msgstr "Množství sloupců v mřížce"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Number of rows in grid"
+msgstr "Množství řádků v mřížce"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Lists:"
+msgstr "Seznamy:"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Compact list items"
+msgstr "Kompaktní seznam položek"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Show list item description"
+msgstr "Zobrazit popisky položek seznamu"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Use system font settings"
+msgstr "Použít systémové nastavení písma"
+
+#: ../contents/ui/ConfigGeneral.qml
+msgid "Enabled"
+msgstr "Povoleno"
+
+#: ../contents/ui/main.qml
+msgid "Edit Applications…"
+msgstr "Upravit aplikace…"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps in a list"
+msgstr "Zobrazit aplikace v seznamu"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps in a grid"
+msgstr "Zobrazit položky v mřížce"
+
+#: ../contents/ui/MenuButton.qml
+msgid "Show apps categorized"
+msgstr "Zobrazit aplikace v kategoriích"
+
+#: ../contents/ui/SearchBar.qml
+msgid "Applications"
+msgstr "Aplikace"
+
+#: ../contents/ui/SearchList.qml
+msgctxt "@info:status"
+msgid "No matches"
+msgstr "Žádné shody"
