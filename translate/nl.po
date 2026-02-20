@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TahoeLauncher\n"
 "Report-Msgid-Bugs-To: https://github.com/EliverLara/TahoeLauncher\n"
-"POT-Creation-Date: 2025-12-10 17:24-0600\n"
+"POT-Creation-Date: 2026-02-20 17:29-0600\n"
 "PO-Revision-Date: 2025-12-12 10:59+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -24,7 +24,8 @@ msgstr "Tahoe-programmastarter"
 
 #: ../metadata.json
 msgid "A modern Launcher for plasma inspired on MacOS!"
-msgstr "Een moderne programmastarter voor Plasma, geïnspireerd op die van macOS!"
+msgstr ""
+"Een moderne programmastarter voor Plasma, geïnspireerd op die van macOS!"
 
 #: ../contents/code/tools.js
 msgid "Remove from Favorites"
