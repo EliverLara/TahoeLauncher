@@ -53,6 +53,11 @@ RowLayout {
         }
     }
 
+    SessionButtons {
+        id: sessionButtons
+        visible: plasmoid.configuration.showSessionActionsButton
+    }
+
     MenuButton {
         id: menuButton
     }

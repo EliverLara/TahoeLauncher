@@ -58,6 +58,8 @@ KCM.SimpleKCM {
     property alias cfg_compactListItems: compactListItems.checked
     property alias cfg_showListItemDescription: showListItemDescription.checked
 
+    property alias cfg_showSessionActionsButton: showSessionActionsButton.checked
+
 
   Kirigami.FormLayout {
 
@@ -210,6 +212,16 @@ KCM.SimpleKCM {
       PlasmaComponents.ToolTip {
           text: panelOffset.value
       }
+    }
+
+    Kirigami.Separator {
+      Kirigami.FormData.isSection: true
+      Kirigami.FormData.label: i18n("Session Actions")
+    }
+
+    CheckBox {
+      id: showSessionActionsButton
+      text: i18n("Show session actions button (shutdown, restart, logout)")
     }
     
     Kirigami.Separator {

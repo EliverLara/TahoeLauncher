@@ -71,5 +71,10 @@
       <label>Show description in list items</label>
       <default>true</default>
     </entry>
+
+    <entry name="showSessionActionsButton" type="Bool">
+      <label>Show session actions button(shutdown, logout, restart...)</label>
+      <default>true</default>
+    </entry>
   </group>
 </kcfg>
