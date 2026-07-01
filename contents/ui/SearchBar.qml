@@ -34,6 +34,7 @@ RowLayout {
         background: Rectangle{
             color: "transparent"
         }
+        color: main.textColor
         focus: true
         onTextChanged: {
             textField.forceActiveFocus(Qt.ShortcutFocusReason)

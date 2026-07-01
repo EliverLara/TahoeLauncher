@@ -9,21 +9,12 @@ Text {
 
     topPadding: 4
     bottomPadding: topPadding
-    leftPadding: 8
-    rightPadding: 8
+    leftPadding: 10
+    rightPadding: 10
     font.pointSize: 10
 
-    color: selected ? "#000000" : main.textColor
-    opacity: selected ? 0.8 : 0.4
-
-   Rectangle {
-        id: pillBg
-        anchors.fill: parent
-        anchors.centerIn: parent
-        z: -1
-        color: selected ? Qt.rgba(255, 255, 255, 0.5) : main.isDarkTheme ? Qt.rgba(255, 255, 255, 0.2) : Qt.rgba(255, 255, 255, 0.5)
-        radius: 8
-    }
+    color: selected ? Qt.rgba(1, 1, 1, 0.95) : main.dimmedTextColor
+    opacity: selected ? 1.0 : 0.65
 
     MouseArea {
         anchors.fill: pill

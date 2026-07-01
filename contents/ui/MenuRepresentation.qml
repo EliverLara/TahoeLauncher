@@ -23,6 +23,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQml
+import QtQuick.Window
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.plasmoid
@@ -34,7 +35,9 @@ PlasmaCore.Dialog {
 	objectName: "popupWindow"
 	flags: Qt.WindowStaysOnTopHint
 
-	location: Plasmoid.configuration.floating || Plasmoid.configuration.launcherPosition == 2 ? "Floating" : Plasmoid.location
+	backgroundHints: PlasmaCore.Types.NoBackground
+
+	location: "Floating"
 	hideOnWindowDeactivate: true
 
 	Plasmoid.status: root.visible ? PlasmaCore.Types.RequiresAttentionStatus : PlasmaCore.Types.PassiveStatus
@@ -93,91 +96,31 @@ PlasmaCore.Dialog {
 	}
 
 	function popupPosition(width, height) {
-		var screenAvail = Plasmoid.availableScreenRect;
-		var screen/*Geom*/ = kicker.screenGeometry;
-		//QtBug - QTBUG-64115
-		/*var screen = Qt.rect(screenAvail.x + screenGeom.x,
-				screenAvail.y + screenGeom.y,
-				screenAvail.width,
-				screenAvail.height);*/
-
-		var offset = 0
-
-		if (Plasmoid.configuration.offsetX > 0 && Plasmoid.configuration.floating) {
-			offset = Plasmoid.configuration.offsetX
-		} else {
-			offset = plasmoid.configuration.floating ? parent.height * 0.35 : 0
-		}
-		// Fall back to bottom-left of screen area when the applet is on the desktop or floating.
-		var x = offset;
-		var y = screen.height - height - offset;
-		var horizMidPoint = screen.x + (screen.width / 2);
-		var vertMidPoint = screen.y + (screen.height / 2);
-		var appletTopLeft = parent.mapToGlobal(0, 0);
-		var appletBottomLeft = parent.mapToGlobal(0, parent.height);
-
-		if (Plasmoid.configuration.launcherPosition != 0){
-			x = horizMidPoint - width / 2;
-		} else {
-			x = (appletTopLeft.x < horizMidPoint) ? screen.x : (screen.x + screen.width) - width;
-			if (Plasmoid.configuration.floating) {
-				if (appletTopLeft.x < horizMidPoint) {
-					x += offset
-				} else if (appletTopLeft.x + width > horizMidPoint){
-					x -= offset
-				}
-			}
-		}
-
-		if (Plasmoid.configuration.launcherPosition != 2){
-			if (Plasmoid.location == PlasmaCore.Types.TopEdge) {
-				if (Plasmoid.configuration.floating) {
-											/*this is floatingAvatar.width*/
-					if (Plasmoid.configuration.offsetY > 0) {
-						offset = (125 * 1) / 2 + Plasmoid.configuration.offsetY
-					} else {
-						offset = (125 * 1) / 2 + parent.height * 0.125
-					}
-				}
-				y = screen.y + parent.height + panelSvg.margins.bottom + offset;
-			} else {
-				if (Plasmoid.configuration.offsetY > 0) {
-					offset = Plasmoid.configuration.offsetY
-				}
-				y = screen.y + screen.height - parent.height - height - panelSvg.margins.top - offset * 2.5;
-			}
-		} else {
-			y = vertMidPoint - height / 2
-		}
-
+		var x = (Screen.width - width) / 2;
+		var y = (Screen.height - height) / 2;
 		return Qt.point(x, y);
 	}
 
 	FocusScope {
 		id: fs
 		focus: true
-		width:  (root.cellSizeWidth * Plasmoid.configuration.numberColumns)+ innerPadding*2//Kirigami.Units.gridUnit*2
-		// Searchbar.height + separator.height  + categories switcher.height 
-		height: 40 + 2 + 40 + (root.cellSizeHeight *rows) + innerPadding//550 * 1
+		width:  (root.cellSizeWidth * Plasmoid.configuration.numberColumns)+ innerPadding*2
+		height: 40 + 2 + 40 + (root.cellSizeHeight * rows) + innerPadding * 2
 		
-		
-		// We want the MainView to have an uniform margin through different plasma themes
-		property real innerPadding: 15 
+		property real innerPadding: 16
 
-		Item {
-			id: mainItem
-			x: - dialogSvg.margins.left
-			y: - dialogSvg.margins.top
-			width: parent.width + dialogSvg.margins.left + dialogSvg.margins.right
-			height: parent.height + dialogSvg.margins.top + dialogSvg.margins.bottom
+		Rectangle {
+			anchors.fill: parent
+			radius: main.glassRadius
+			color: main.glassFill
+			border.width: 1
+			border.color: main.glassBorderColor
+		}
 
-			MainView {
-				id: main
-				width:  mainItem.width - (fs.innerPadding)
-				height: mainItem.height - (fs.innerPadding*2)
-				x: fs.innerPadding
-				y: fs.innerPadding
-			}
+		MainView {
+			id: main
+			anchors.fill: parent
+			anchors.margins: fs.innerPadding
 		}
 
 		Keys.onPressed: {

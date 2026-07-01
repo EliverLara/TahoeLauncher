@@ -36,9 +36,9 @@ AppListView {
 			Rectangle {
                 id: separator
 				width: parent.width
-				height: 1.5
+				height: 1
                 // not showing on the first item to avoid duplicating with searchbar separator
-				color: index > 0 ? main.contrastBgColor : "transparent"
+				color: index > 0 ? main.glassBorderColor : "transparent"
 			}
 			RowLayout {
 				Layout.fillWidth: true
@@ -85,8 +85,6 @@ AppListView {
 
 		GridView {
 			id: grid
-
-			leftMargin: fs.innerPadding / 2 // Centers the grid
 			
 			property var rows: {
 				if(grid.model.count%root.columns == 0 )  {

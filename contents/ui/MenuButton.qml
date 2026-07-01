@@ -52,8 +52,10 @@ Item {
         icon.name: "application-menu" 
 
         background: Rectangle {
-            color: button.down ? main.contrastBgColor : "transparent"
+            color: button.down ? main.glassFillHover : "transparent"
             radius: height / 2
+            border.width: button.down ? 1 : 0
+            border.color: main.glassBorderColor
         }
         onPressed: contextMenu.openRelative()
     }

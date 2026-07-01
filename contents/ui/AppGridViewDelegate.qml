@@ -82,10 +82,11 @@ Item {
 			
 		width: appicon.width + 4 * highlightItemSvg.margins.top
 		height: appicon.height + 4 * highlightItemSvg.margins.top
-		radius: 14
-		color: "transparent"
-		border.width: 2
-		border.color: main.dimmedTextColor
+		radius: main.glassRadiusIcon
+		color: main.glassFillHover
+		opacity: 0
+		border.width: 1
+		border.color: main.glassBorderColor
 
 		anchors.top: parent.top
 		anchors.horizontalCenter: parent.horizontalCenter
@@ -95,21 +96,20 @@ Item {
 		id: appIconShadow
 		visible: true
 		anchors.fill: appicon
-	 	// cached: true
 		horizontalOffset: 0
-		verticalOffset: 0
-		radius: 15.0
-		samples: 16
-		color: "#000000"//main.glowColor1
+		verticalOffset: 4
+		radius: 18.0
+		samples: 20
+		color: "#33000000"
 		source: appicon
-
 	}
+
 	state: "default"
 	states: [
 		State {
 			name: "highlight"; when: (grid.canMoveWithKeyboard ? focus : highlighted)
-			PropertyChanges { target: appIconShadow;  color: "#4D000000"}
-			PropertyChanges { target: appiconHighlight;  opacity: 0.4}
+			PropertyChanges { target: appIconShadow; color: "#44000000"}
+			PropertyChanges { target: appiconHighlight; opacity: 1}
 		},
 		State {
 			name: "default"; when: (grid.canMoveWithKeyboard ? !focus : !highlighted)

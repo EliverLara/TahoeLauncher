@@ -63,6 +63,7 @@ Item {
 
     Component.onCompleted: {
         dashWindow = Qt.createQmlObject("MenuRepresentation {}", root);
+        dashWindow.appletInterface = kicker;
         plasmoid.activated.connect(function() {
             dashWindow.visible = !dashWindow.visible;
         });

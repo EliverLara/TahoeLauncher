@@ -32,6 +32,10 @@ ColumnLayout {
 		for (var i = 0; i < rootModel.count; i++) {
 			categoryName  = rootModel.data(rootModel.index(i, 0), Qt.DisplayRole);
 			categoryIcon  = rootModel.data(rootModel.index(i, 0), Qt.DecorationRole);
+
+			if (!categoryName || !String(categoryName).trim()) {
+				continue;
+			}
 					
 			categories.push({
 				name: categoryName,
@@ -70,8 +74,8 @@ ColumnLayout {
 	AppCategorySwitcher {
 		id: categorySwitcher
 
-		Layout.preferredWidth: parent.width-fs.innerPadding
-    	Layout.preferredHeight: visible ? 40 : 0
+		Layout.fillWidth: true
+     	Layout.preferredHeight: visible ? 40 : 0
 		model: appsCategoriesList
 		visible: !showItemsCategorized && main.showAllApps
 
@@ -113,7 +117,6 @@ ColumnLayout {
 		AppGridView {
 			id: grid
 			anchors.fill: parent
-			anchors.leftMargin: fs.innerPadding / 2
 			
 			model: main.showAllApps ? currentModel : globalFavorites
 			canMoveWithKeyboard: true

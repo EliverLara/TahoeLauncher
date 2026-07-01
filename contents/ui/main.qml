@@ -37,6 +37,8 @@ PlasmoidItem {
 
     anchors.fill: parent
 
+    Plasmoid.backgroundHints: PlasmaCore.Types.StandardBackground
+
     signal reset
 
     property bool isDash: false
@@ -163,12 +165,6 @@ PlasmoidItem {
         id: panelSvg
         visible: false
         imagePath: "widgets/panel-background"
-    }
-
-    KSvg.FrameSvgItem {
-        id: dialogSvg
-        visible: false
-        imagePath: "dialogs/background"
     }
 
     PlasmaComponents.Label {
