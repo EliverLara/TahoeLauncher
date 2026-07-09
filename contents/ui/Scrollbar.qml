@@ -23,7 +23,7 @@ ScrollBar {
 
 
     background: Rectangle{
-        color: control.active ? main.contrastBgColor : "transparent"
+        color: control.active ? main.glassFill : "transparent"
         opacity: control.policy === ScrollBar.AlwaysOn || (control.active && control.size < 1.0) ? 1 : 0
 
         // Animate the changes in opacity (default duration is 250 ms).

@@ -44,6 +44,16 @@ Item {
 	property color contrastBgColor: isDarkTheme ? Qt.rgba(255, 255, 255, 0.15) : Qt.rgba(0, 0, 0, 0.1)
 	property color dimmedTextColor: Qt.rgba(textColor.r, textColor.g, textColor.b, 0.7)
 
+	// Liquid Glass properties
+	property color glassFill: Qt.rgba(0.08, 0.08, 0.14, 0.65)
+	property color glassFillHover: Qt.rgba(0.12, 0.12, 0.20, 0.72)
+	property color glassBorderColor: isDarkTheme ? Qt.rgba(1.0, 1.0, 1.0, 0.13) : Qt.rgba(1.0, 1.0, 1.0, 0.13)
+	property color glassBorderHighlight: isDarkTheme ? Qt.rgba(255, 255, 255, 0.5) : Qt.rgba(255, 255, 255, 0.7)
+	property color glassShadowColor: isDarkTheme ? Qt.rgba(0, 0, 0, 0.3) : Qt.rgba(0, 0, 0, 0.15)
+	property int glassRadius: 32
+	property int glassRadiusIcon: 16
+	property int glassRadiusSmall: 16
+
 	property bool showAllApps: true
 
 	function reload() {
@@ -69,17 +79,9 @@ Item {
 			Layout.fillWidth: true
 			Layout.preferredHeight: 40
 			Layout.maximumHeight: Layout.preferredHeight
-			Layout.rightMargin: fs.innerPadding
 			showMenuButton: !searching
 			Keys.priority: Keys.AfterItem
 			Keys.forwardTo: searching ? searchList : appList.viewItem
-		}
-
-		Rectangle {
-			Layout.fillWidth: true
-			Layout.rightMargin: fs.innerPadding
-			height: 1.5
-			color: main.contrastBgColor
 		}
 
 		AllAppsList{

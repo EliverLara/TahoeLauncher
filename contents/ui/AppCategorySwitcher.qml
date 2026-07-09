@@ -10,17 +10,20 @@ ScrollView {
 
     ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
     ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+    padding: 0
+
+    background: Item {}
 
     AppListView {
         id: categorySwitcher
         spacing: 7
         orientation: ListView.Horizontal
         showScrollbar: false
+        showHighlight: false
         property var contentHeight: 0
 
-        anchors.topMargin: (parent.height - contentHeight ) /2			
+        anchors.topMargin: Math.max(0, (parent.height - contentHeight) / 2)
         anchors.fill: parent
-        anchors.centerIn: parent
         
         delegate: CategoryPill {
             id: del
@@ -36,7 +39,11 @@ ScrollView {
             }
         }
 
-        onCurrentIndexChanged: categorySwitched(categorySwitcher.currentItem.model.modelIndex)
+        onCurrentIndexChanged: {
+            if (categorySwitcher.currentItem && categorySwitcher.currentItem.model) {
+                categorySwitched(categorySwitcher.currentItem.model.modelIndex)
+            }
+        }
     }
 
     MouseArea {

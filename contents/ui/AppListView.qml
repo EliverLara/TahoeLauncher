@@ -25,9 +25,10 @@ import org.kde.kirigami as Kirigami
 ListView {
 	id: listView
 
-    property real availableWidth:  listView.width - fs.innerPadding
+    property real availableWidth: listView.width
 
 	property bool showSectionSeparator: true
+	property bool showHighlight: true
 
 	property bool showScrollbar: true // Used to hide scrollbar in AppCategorySwitcher
 
@@ -55,7 +56,12 @@ ListView {
     highlightResizeDuration: 0
     highlightMoveDuration: 50
 
-    highlight: Highlight{}
+    highlight: showHighlight ? highlightComponent : null
+
+    Component {
+		id: highlightComponent
+		Highlight {}
+	}
 
     delegate: AppListViewDelegate {
 		triggerModel: listView.model
