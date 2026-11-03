@@ -156,9 +156,15 @@ PlasmaCore.Dialog {
 	FocusScope {
 		id: fs
 		focus: true
-		width:  (root.cellSizeWidth * Plasmoid.configuration.numberColumns)+ innerPadding*2//Kirigami.Units.gridUnit*2
+		// The Dialog resets width/height to the window size. Set the grid size as
+		// implicit size and Layout hints instead, since the Dialog never writes those.
+		implicitWidth:  (root.cellSizeWidth * Plasmoid.configuration.numberColumns)+ innerPadding*2//Kirigami.Units.gridUnit*2
 		// Searchbar.height + separator.height  + categories switcher.height 
-		height: 40 + 2 + 40 + (root.cellSizeHeight *rows) + innerPadding//550 * 1
+		implicitHeight: 40 + 2 + 40 + (root.cellSizeHeight *rows) + innerPadding//550 * 1
+		Layout.minimumWidth: implicitWidth
+		Layout.maximumWidth: implicitWidth
+		Layout.minimumHeight: implicitHeight
+		Layout.maximumHeight: implicitHeight
 		
 		
 		// We want the MainView to have an uniform margin through different plasma themes
