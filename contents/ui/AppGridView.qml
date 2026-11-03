@@ -22,6 +22,9 @@ GridView {
     keyNavigationWraps: false
 
     highlightMoveDuration: 0
+    // Hovering an app sets currentIndex, and GridView would scroll to show it.
+    // Only keyboard navigation should scroll, and Keys.onPressed handles that.
+    highlightFollowsCurrentItem: false
 
     cellWidth: root.cellSizeWidth
     cellHeight: root.cellSizeHeight
@@ -199,6 +202,7 @@ GridView {
         }
         movedWithKeyboard = event.accepted
         if (movedWithKeyboard) {
+            positionViewAtIndex(currentIndex, GridView.Contain)
             movedWithKeyboardTimer.restart()
         }
     }
